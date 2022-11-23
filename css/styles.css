@@ -46,7 +46,8 @@ form {
   padding: 10px;
   border: 1px solid #eee;
   outline: none;
-  width: 65%;
+  border-radius: 8px;
+  width: 40%;
 }
 
 .inputForm::placeholder {
