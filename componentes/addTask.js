@@ -64,7 +64,7 @@ export const crearCard = ({value, date, complete, id}) => {
     contenidoTarea.appendChild(tituloTarea);
     tarea.appendChild(contenidoTarea);
     tarea.appendChild(dataElement);
-    tarea.appendChild(eliminar());
+    tarea.appendChild(eliminar(id));
 
     return tarea;
 };
