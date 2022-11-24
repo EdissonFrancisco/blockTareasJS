@@ -1,13 +1,15 @@
 import { crearCard } from "./addTask.js";
-import { uniqueDate } from "../services/date.js";
+import { orderDates, uniqueDate } from "../services/date.js";
 import dataElement from "./dataElement.js";
 
 export function displayTask() {
+
     const list = document.querySelector('[data-list]');
-
     const taskList = JSON.parse(localStorage.getItem('task')) || [];
-
     const dates = uniqueDate(taskList);
+    
+    orderDates(dates);
+
     dates.forEach((date) => {
         const dateMoment = moment(date, 'DD/MM/YYYY');
         list.appendChild(dataElement(date));
